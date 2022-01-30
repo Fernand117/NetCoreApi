@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ComicStore.COMMON\ComicStore.COMMON.csproj" />
+    <ProjectReference Include="..\ComicStore.DAL\ComicStore.DAL.csproj" />
+  </ItemGroup>
+
+</Project>
