@@ -28,6 +28,23 @@ namespace ComicStore.DAL.Context
                       .HasColumnName("nombre")
                       .HasMaxLength(50);
             });
+
+            modelBuilder.Entity<Comic>(entity =>
+            {
+                entity.HasKey(c => c.Id)
+                      .HasName("PK_tbComic");
+                
+                entity.ToTable("comics");
+
+                entity.Property(c => c.Id)
+                      .HasColumnName("idComic")
+                      .UseIdentityByDefaultColumn();
+
+                entity.HasOne(c => c.IdCategoriaNavigation)
+                      .WithMany(c => c.Comics)
+                      .HasForeignKey(c => c.IdCategoria)
+                      .HasConstraintName("FK_tbCategorias_tbComics");
+            });
         }
 
         #region DBSETS

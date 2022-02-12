@@ -21,7 +21,7 @@ namespace ComicStore.API.Controllers.Categoria
         [HttpGet]
         public async Task<ActionResult<ApiResponse>> Get() => await new CategoriaBLO().Read();
 
-        [HttpGet("/{idCategoria}")]
+        [HttpGet("{idCategoria}")]
         public async Task<ActionResult<ApiResponse>> Get(int IdCategoria) => await new CategoriaBLO().Read(IdCategoria);
 
         [HttpPost]
@@ -30,7 +30,7 @@ namespace ComicStore.API.Controllers.Categoria
         [HttpPut]
         public async Task<ActionResult<ApiResponse>> Put([FromBody] CategoriasRequest request) => await new CategoriaBLO().Update(request);
 
-        [HttpDelete]
-        public async Task<ActionResult<ApiResponse>> Delete([FromBody] CategoriasRequest request) => await new CategoriaBLO().Delete(request);
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<ApiResponse>> Delete(int id) => await new CategoriaBLO().Delete(id);
     }
 }

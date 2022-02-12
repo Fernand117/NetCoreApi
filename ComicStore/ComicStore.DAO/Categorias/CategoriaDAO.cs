@@ -105,14 +105,14 @@ namespace ComicStore.DAO.Categorias
             return request;
         }
 
-        public async Task<CategoriasRequest> Delete(CategoriasRequest request)
+        public async Task<CategoriasRequest> Delete(int id)
         {
             try
             {
                 using (ComicContext context = new ComicContext())
                 {
                     var categoria = await context.Categorias
-                                                 .Where(c => c.Id == request.IdCategoria)
+                                                 .Where(c => c.Id == id)
                                                  .FirstOrDefaultAsync();
                     if (categoria != null)
                     {
@@ -128,7 +128,10 @@ namespace ComicStore.DAO.Categorias
             }
             catch (Exception ex) { }
 
-            return request;
+            return new CategoriasRequest()
+            {
+                IdCategoria = id
+            };
         }
     }
 }

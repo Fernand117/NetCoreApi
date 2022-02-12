@@ -85,14 +85,14 @@ namespace ComicStore.BLO.Categorias
             return apiResponse;
         }
 
-        public async Task<ApiResponse> Delete(CategoriasRequest request)
+        public async Task<ApiResponse> Delete(int id)
         {
             ApiResponse apiResponse = new ApiResponse();
             try
             {
                 apiResponse.ResponseCode = Response.Success;
                 apiResponse.ResponseText = ComicResources.MensajeOk;
-                apiResponse.Data = await new CategoriaDAO().Delete(request);
+                apiResponse.Data = await new CategoriaDAO().Delete(id);
             }
             catch (Exception)
             {
