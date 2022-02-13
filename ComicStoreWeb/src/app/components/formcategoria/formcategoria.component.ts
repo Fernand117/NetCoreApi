@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { CategoriaService } from '../../services/categoria.service';
 
 @Component({
-  selector: 'app-body',
-  templateUrl: './body.component.html'
+  selector: 'app-formcategoria',
+  templateUrl: './formcategoria.component.html',
+  styleUrls: ['./formcategoria.component.scss']
 })
-
-export class BodyComponent implements OnInit{
+export class FormcategoriaComponent implements OnInit {
 
   private categorias: any[] = [];
   private formData: FormData = new FormData();
@@ -28,4 +28,5 @@ export class BodyComponent implements OnInit{
       }
     );
   }
+
 }

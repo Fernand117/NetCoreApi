@@ -11,12 +11,6 @@ namespace ComicStore.API.Controllers.Categoria
     [ApiController]
     public class CategoriaController : ControllerBase
     {
-        /* TAREA
-         * Cómo crear un enviroment
-         * Desde Postman enviar peticiones al API
-         * Generar migraciones
-         * Poner la relación 1:M en el API Fuence
-         */
 
         [HttpGet]
         public async Task<ActionResult<ApiResponse>> Get() => await new CategoriaBLO().Read();

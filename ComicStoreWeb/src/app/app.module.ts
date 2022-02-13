@@ -8,6 +8,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { BodyComponent } from './components/body/body.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CategoriaService } from './services/categoria.service';
+import { TablecategoriasComponent } from './components/tablecategorias/tablecategorias.component';
+import { FormcategoriaComponent } from './components/formcategoria/formcategoria.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { CategoriaService } from './services/categoria.service';
     HeaderComponent,
     BodyComponent,
     FooterComponent,
-    FormData
+    TablecategoriasComponent,
+    FormcategoriaComponent
   ],
   imports: [
     BrowserModule,
