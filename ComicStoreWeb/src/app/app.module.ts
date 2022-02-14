@@ -8,22 +8,20 @@ import { HeaderComponent } from './components/header/header.component';
 import { BodyComponent } from './components/body/body.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CategoriaService } from './services/categoria.service';
-import { TablecategoriasComponent } from './components/tablecategorias/tablecategorias.component';
-import { FormcategoriaComponent } from './components/formcategoria/formcategoria.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     BodyComponent,
-    FooterComponent,
-    TablecategoriasComponent,
-    FormcategoriaComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [CategoriaService],
   bootstrap: [AppComponent]

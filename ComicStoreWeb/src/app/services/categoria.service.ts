@@ -1,7 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 
-
 @Injectable()
 export class CategoriaService {
 
@@ -13,7 +12,19 @@ export class CategoriaService {
     return this.http.get(`${this.url}`);
   }
 
+  buscarCategoria(id: number) {
+    return this.http.get(`${this.url}/${id}`);
+  }
+
   nuevaCategoria(datos: any) {
     return this.http.post(`${this.url}`, datos);
+  }
+
+  editarCategoria(datos: any) {
+    return this.http.put(`${this.url}`, datos);
+  }
+
+  eliminarCategoria(id: number) {
+    return this.http.delete(`${this.url}/${id}`);
   }
 }

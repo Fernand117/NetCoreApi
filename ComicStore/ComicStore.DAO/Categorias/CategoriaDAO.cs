@@ -70,7 +70,7 @@ namespace ComicStore.DAO.Categorias
                 using(ComicContext context = new ComicContext())
                 {
                     var categoria = await context.Categorias
-                                                 .Where(c => c.Id == IdCategoria)
+                                                 .Where(c => c.Id == IdCategoria && c.Estado == "ACTIVO")
                                                  .FirstOrDefaultAsync();
                     if (categoria != null)
                     {
