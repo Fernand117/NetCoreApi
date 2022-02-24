@@ -9,7 +9,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ComicStore.DAL.Migrations
 {
     [DbContext(typeof(ComicContext))]
-    [Migration("20220212194744_inicial")]
+    [Migration("20220215050743_inicial")]
     partial class inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -7,7 +7,7 @@ namespace ComicStore.DAL.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connection = "host=localhost;port=5432;database=comicstore;username=postgres;password=Master117+";
+            var connection = "host=localhost;port=5432;database=comicstore;username=postgres;";
             optionsBuilder.UseNpgsql(connection);
         }
 
